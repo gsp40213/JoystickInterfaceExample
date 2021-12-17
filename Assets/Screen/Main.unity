@@ -206,7 +206,7 @@ RectTransform:
   - {fileID: 499340837}
   - {fileID: 715141487}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -228,7 +228,6 @@ MonoBehaviour:
   fixedJoystick_image: {fileID: 499340838}
   handle_image: {fileID: 609637814}
   jump_btn: {fileID: 715141484}
-  pointX: 0.33
 --- !u!1 &161590749
 GameObject:
   m_ObjectHideFlags: 0
@@ -533,7 +532,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &715141483
 GameObject:
@@ -660,7 +659,7 @@ GameObject:
   - component: {fileID: 1113239358}
   - component: {fileID: 1113239357}
   m_Layer: 0
-  m_Name: Camera
+  m_Name: MainCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -728,7 +727,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 25.354002, y: 0, z: 0}
 --- !u!1 &1605001910
 GameObject:
@@ -851,9 +850,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b60036d2d266e5c44b073c1218f9325a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gravity: 10
-  maxVelocityChange: 50
-  jumpHeight: 1
   speed: 5
 --- !u!1 &1919887947
 GameObject:
@@ -919,5 +915,5 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

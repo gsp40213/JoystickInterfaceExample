@@ -35,8 +35,11 @@ public class Player : MonoBehaviour
             velocityChange.y = 0;
             rigidbody.AddForce(velocityChange, ForceMode.VelocityChange);
 
-            if (Layout_Main.JUMP_SW)
+            if (Layout_Main.JUMP_SW)         
                 rigidbody.velocity = new Vector3(velocity.x, CalculateJumpVerticalSpeed(), velocity.z);
+
+            if (Layout_Main.JUMP_ACTIVE == false)
+                Layout_Main.JUMP_SW = false;
         }
 
         rigidbody.AddForce(new Vector3(0, -gravity * rigidbody.mass, 0));

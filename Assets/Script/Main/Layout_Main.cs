@@ -7,7 +7,7 @@ public class Layout_Main : Joystick
 {
     public Image fixedJoystick_image, handle_image;
     public Button jump_btn;
-    
+
     InterfaceOBJ fixedJoystick, jump;
 
     public static Vector3 DIRCTION;
@@ -15,9 +15,9 @@ public class Layout_Main : Joystick
 
     // 計時器
     private float timeCount;
-    private float timeCD = 1;
+    private float timeCD = 1f;
 
-    private bool jumpAcive;
+    public static bool JUMP_ACTIVE;
 
     private void Start()
     {
@@ -31,30 +31,24 @@ public class Layout_Main : Joystick
         jump.button(1.68f, 0.42f, 0.2f, 80, jump_onClkck);
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         DIRCTION = base.InputDirection;
-        jumpCd();        
+        JUMP_ACTIVE = jumpCd();
     }
 
     void jump_onClkck()
     {
-        if (jumpAcive)
+        if (JUMP_ACTIVE == true)
         {
-            timeCount = timeCD;
             JUMP_SW = true;
+            timeCount = timeCD;
         }
     }
 
     // 跳躍冷卻時間
-    public void jumpCd()
+    public bool jumpCd()
     {
-        JUMP_SW = false;
-
-        if ((timeCount -= Time.deltaTime) <= 0)
-        {
-            jumpAcive = true;
-        }
-        else jumpAcive = false;
+        return ((timeCount -= Time.deltaTime) <= 0) ? true : false;
     }
 }
