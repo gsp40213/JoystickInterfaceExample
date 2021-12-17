@@ -4,8 +4,7 @@
 ---------------------------------------------------------------
 Joystick腳本可以直接丟到物件上面，但是要寫需更改。
 
-public class Joystick : MonoBehaviour, IDragHandler, IPointerUpHandler, IPointerDownHandler{
-    
+public class Joystick : MonoBehaviour, IDragHandler, IPointerUpHandler, IPointerDownHandler{ 
     public Vector3 InputDirection = Vector3.zero;
     void Start(){
         container = GetComponent<Image>();
